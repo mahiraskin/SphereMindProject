@@ -10,5 +10,5 @@ Each soccer character will have its own special abilities as well as depending o
 On each map there are 3 different zones. Defensive zone (red area 1), neutral zone (green area), and offensive zone (red area 2).
 # Important!
 The following libraries must be installed in order to run the program
- - Unity Net Code
- - Multiplayer Tools 
+ - Unity Net Code `com.unity.netcode.gameobjects`
+ - Multiplayer Tools  `com.unity.multiplayer.tools`
