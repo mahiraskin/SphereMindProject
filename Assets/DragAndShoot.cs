@@ -17,6 +17,7 @@ public class DragAndShoot : NetworkBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        gameObject.GetComponent<DropToGame>().enabled = false;
     }
 
     void Update() {

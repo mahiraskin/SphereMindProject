@@ -3,21 +3,21 @@ using System.Collections.Generic;
 using Unity.Netcode;
 using UnityEngine;
 
-public class DropToGame: MonoBehaviour
+public class DropToGame: NetworkBehaviour
 {
     private Vector3 mOffset;
     private float mZCoord;
-    public GameObject Ex;
+   // public GameObject Ex;
 
     void OnMouseDown()
     {
-        GameObject go = Instantiate(Ex, Vector3.zero, Quaternion.identity);
-        go.GetComponent<NetworkObject>().Spawn();
+        //GameObject go = Instantiate(Ex, Vector3.zero, Quaternion.identity);
+        //go.GetComponent<NetworkObject>().Spawn();
 
-        mZCoord = Camera.main.WorldToScreenPoint(go.transform.position).z;
+        mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
 
         // Store offset = gameobject world pos - mouse world pos
-        mOffset = go.transform.position - GetMouseAsWorldPoint();
+        mOffset = gameObject.transform.position - GetMouseAsWorldPoint();
     }
 
     private Vector3 GetMouseAsWorldPoint()

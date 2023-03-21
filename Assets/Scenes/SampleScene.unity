@@ -270,6 +270,7 @@ GameObject:
   - component: {fileID: 134527645}
   - component: {fileID: 134527644}
   - component: {fileID: 134527643}
+  - component: {fileID: 134527647}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -360,6 +361,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &134527647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134527642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd5b60b06355beb4285f037b96b7a5cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  But: {fileID: 1621946075}
+  Ex: {fileID: 4748159695280963816, guid: 33b41edc11171154b9e7a24c5ba18deb, type: 3}
+  PTransform: {fileID: 851765894}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,6 +592,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 780071017}
   m_CullTransparentMesh: 1
+--- !u!1 &851765893
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 851765894}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &851765894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851765893}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.5872116, y: 0.36344293, z: -10.303467}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &880144319
 GameObject:
   m_ObjectHideFlags: 0
@@ -854,7 +901,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1136073983}
-  - component: {fileID: 1136073984}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -877,19 +923,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1136073984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1136073982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8ec0e7d1c56df54b92630e9a052540e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Ex: {fileID: 4748159695280963816, guid: 33b41edc11171154b9e7a24c5ba18deb, type: 3}
 --- !u!1 &1338863918
 GameObject:
   m_ObjectHideFlags: 0
@@ -1133,7 +1166,7 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 1583046396}
-    PlayerPrefab: {fileID: 4748159695280963816, guid: 33b41edc11171154b9e7a24c5ba18deb, type: 3}
+    PlayerPrefab: {fileID: 0}
     NetworkPrefabs:
     - Override: 0
       Prefab: {fileID: 4748159695280963816, guid: 33b41edc11171154b9e7a24c5ba18deb, type: 3}
