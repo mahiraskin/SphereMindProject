@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Netcode;
+using Unity.Netcode.Components;
 using UnityEngine;
 
 
@@ -8,6 +9,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class DragAndShoot : NetworkBehaviour
 {
+    
     private Vector3 mousePressDownPos;
     private Vector3 mouseReleasePos;
     private Rigidbody rb;
@@ -17,7 +19,6 @@ public class DragAndShoot : NetworkBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        gameObject.GetComponent<DropToGame>().enabled = false;
     }
 
     void Update() {
@@ -42,12 +43,18 @@ public class DragAndShoot : NetworkBehaviour
         Debug.Log("mousePressDownPos: " + mousePressDownPos);
         Vector3 force = mouseReleasePos - mousePressDownPos;
         Debug.Log("force: " + force);
-        Shoot(force*1000);
+        Shoot(force*10000);
     }
 
     private float forceMultiplier = 3;
+
     void Shoot(Vector3 force)
     {
+       // if (ManageTurns.Instance.MyTurn(GetComponent<NetworkTransform>().OwnerClientId))
+       // {
+       //     return;
+       // }
+
         if(isShoot)    
             return;
         
@@ -55,10 +62,8 @@ public class DragAndShoot : NetworkBehaviour
         forceVector = -forceVector;
         Debug.Log("forceVector: " + forceVector);
         //delete this later
-        if (IsOwner)
-        {
-            rb.AddForce(forceVector * forceMultiplier);
-        }
+        Debug.Log("Shoot");
+        rb.AddForce(forceVector * forceMultiplier);
         isShoot = true;
     }
 }
