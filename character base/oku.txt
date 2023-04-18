@@ -1,0 +1,3 @@
+ball ve character prefablarını yerleştirin
+uygun physic material ları collider içinde yoksa koyun
+hareket halinde görmek istiyorsan, zaten yoksa characterMove scriptini ekle
